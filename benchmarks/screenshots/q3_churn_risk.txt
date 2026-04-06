@@ -1,0 +1,6 @@
+Index Scan using idx_members_churn_risk on members  (cost=0.22..18.45 rows=145 width=42) (actual time=0.082..0.445 rows=112 loops=1)
+  Index Cond: (last_checkin_at < (now() - '45 days'::interval))
+  Filter: (status = 'active'::text)
+  Buffers: shared hit=12
+Planning Time: 0.184 ms
+Execution Time: 0.512 ms

@@ -1,0 +1,8 @@
+Aggregate  (cost=8.44..8.45 rows=1 width=8) (actual time=0.241..0.242 rows=1 loops=1)
+  Buffers: shared hit=4
+  ->  Index Only Scan using idx_checkins_live_occupancy on checkins  (cost=0.15..8.41 rows=12 width=0) (actual time=0.031..0.045 rows=47 loops=1)
+        Index Cond: (gym_id = 'c8b6e76c-3b9e-4e8a-8f9d-1f2e3d4c5b6a'::uuid)
+        Heap Fetches: 0
+        Buffers: shared hit=4
+Planning Time: 0.112 ms
+Execution Time: 0.284 ms

@@ -1,0 +1,5 @@
+Index Scan using idx_anomalies_active on anomalies  (cost=0.12..8.14 rows=5 width=48) (actual time=0.045..0.124 rows=3 loops=1)
+  Index Cond: (resolved = false)
+  Buffers: shared hit=4
+Planning Time: 0.112 ms
+Execution Time: 0.154 ms

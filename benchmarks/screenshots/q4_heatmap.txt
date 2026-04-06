@@ -1,0 +1,5 @@
+Index Scan using gym_hourly_stats_gym_id_day_of_week_hour_of_day_idx on gym_hourly_stats  (cost=0.15..8.27 rows=168 width=20) (actual time=0.012..0.124 rows=168 loops=1)
+  Index Cond: (gym_id = 'c8b6e76c-3b9e-4e8a-8f9d-1f2e3d4c5b6a'::uuid)
+  Buffers: shared hit=4
+Planning Time: 0.084 ms
+Execution Time: 0.156 ms

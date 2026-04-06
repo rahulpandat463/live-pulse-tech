@@ -1,0 +1,8 @@
+Aggregate  (cost=12.56..12.57 rows=1 width=32) (actual time=0.312..0.313 rows=1 loops=1)
+  Buffers: shared hit=8
+  ->  Index Scan using idx_payments_gym_date on payments  (cost=0.28..12.45 rows=22 width=9) (actual time=0.045..0.082 rows=15 loops=1)
+        Index Cond: (gym_id = 'c8b6e76c-3b9e-4e8a-8f9d-1f2e3d4c5b6a'::uuid)
+        Filter: (paid_at >= CURRENT_DATE)
+        Buffers: shared hit=8
+Planning Time: 0.156 ms
+Execution Time: 0.354 ms

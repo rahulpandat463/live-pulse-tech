@@ -1,0 +1,11 @@
+Sort  (cost=12.45..12.46 rows=10 width=42) (actual time=1.121..1.124 rows=10 loops=1)
+  Sort Key: (sum(amount)) DESC
+  Buffers: shared hit=28
+  ->  HashAggregate  (cost=12.28..12.38 rows=10 width=42) (actual time=0.985..1.012 rows=10 loops=1)
+        Group Key: gym_id
+        Buffers: shared hit=28
+        ->  Index Scan using idx_payments_date on payments  (cost=0.28..12.18 rows=200 width=22) (actual time=0.082..0.745 rows=1800 loops=1)
+              Index Cond: (paid_at >= (now() - '30 days'::interval))
+              Buffers: shared hit=28
+Planning Time: 0.245 ms
+Execution Time: 1.184 ms
